@@ -8,28 +8,30 @@
   {% else %}
   <h3>Add Expense</h3>
   {% endif %}
-    <form method="post">
-        {% csrf_token %}
-        <div class="mb-3 mt-4">
-          <label for="exampleInputEmail1" class="form-label">Expence Name</label>
-          <input type="text" class="form-control" id="" name="Expense Name" aria-describedby="emailHelp" value="{{data.name}}">
-        </div>
-      
+  <form method="post">
+    {% csrf_token %}
+    <div class="mb-3 mt-4">
+      <label for="exampleInputEmail1" class="form-label">Expence Name</label>
+      <input type="text" class="form-control" id="" name="Expense Name" aria-describedby="emailHelp"
+        value="{{data.name}}">
+    </div>
 
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Amount</label>
-            <input type="number" class="form-control" id="#" name="Amount" aria-describedby="emailHelp" value="{{data.amount}}">
-          </div>
 
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Category</label>
-            <input type="text" class="form-control" id="#" name="Category" value="{{data.category}}">
-          </div>
-        {% if data %}
-        <button type="submit" class="btn btn-primary mb-4">Update</button>
-        {% else %}
-        <button type="submit" class="btn btn-primary mb-4">Add Expense</button>
-        {% endif %}
-      </form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Amount</label>
+      <input type="number" class="form-control" id="#" name="Amount" aria-describedby="emailHelp"
+        value="{{data.amount}}">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Category</label>
+      <input type="text" class="form-control" id="#" name="Category" value="{{data.category}}">
+    </div>
+    {% if data %}
+    <button type="submit" class="btn btn-primary mb-4">Update</button>
+    {% else %}
+    <button type="submit" class="btn btn-primary mb-4">Add Expense</button>
+    {% endif %}
+  </form>
 </div>
 ]{% endblock %}

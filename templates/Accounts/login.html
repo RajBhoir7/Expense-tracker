@@ -1,0 +1,32 @@
+{% extends 'home/base.html' %}
+
+{% block start %}
+<style>
+  #first{
+    background-color: lightblue;
+  }
+</style>
+<div class="container card col-3 mt-4 shadow " id="first">
+  <form method="post">
+    {% csrf_token %}
+  {% include 'Accounts/alert.html'  %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label mt-4">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary mb-3">Submit</button>
+  </form>
+</div>
+
+
+
+
+
+
+
+{% endblock %}
